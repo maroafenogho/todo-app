@@ -2,7 +2,7 @@
 
 This is a ToDo app built with a combination of various concepts in flutter. The app uses Provider as it's state management architecture.
 
-##What the app teaches:
+## What the app teaches:
 
 - State management
 - Use of Provider state management pattern
