@@ -8,6 +8,7 @@ This is a ToDo app built with a combination of various concepts in flutter. The 
 - Use of Provider state management pattern
 - abstraction
 - Use of callbacks
+- RxDart
 - FocusedMenu which pops up a list of options on long press
 - Listview builder
 

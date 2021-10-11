@@ -19,10 +19,20 @@ class TaskData extends ChangeNotifier {
     return UnmodifiableListView(_tasks);
   }
 
-  late String taskName;
-
+  late int taskIndex;
+  // late String taskName;
+int getTaskIndex(String name){
+   return  _tasks.indexOf(Task(name: name));
+   notifyListeners();
+}
   int get taskCount {
     return _tasks.length;
+  }
+
+  void editTask(String editedTitle, int index) {
+    _tasks.removeAt(index);
+    _tasks.insert(index, Task(name: editedTitle));
+    notifyListeners();
   }
 
   void addTask(String newString) {

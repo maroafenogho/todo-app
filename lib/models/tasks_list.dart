@@ -3,6 +3,7 @@ import 'package:focused_menu/focused_menu.dart';
 import 'package:focused_menu/modals.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/models/task_data.dart';
+import 'package:todo_app/screens/edit_tasks.dart';
 
 import 'task_tile.dart';
 
@@ -21,7 +22,15 @@ class TasksList extends StatelessWidget {
                     title: Text("Edit"),
                     trailingIcon: Icon(Icons.edit),
                     onPressed: () {
-                      taskData.deleteTask(task);
+                      showModalBottomSheet(
+                        isScrollControlled: true,
+                        context: context,
+                        builder: (context) => SingleChildScrollView(
+                          padding: EdgeInsets.only(
+                              bottom: MediaQuery.of(context).viewInsets.bottom),
+                          child: EditTask(),
+                        ),
+                      );
                     }),
                 FocusedMenuItem(
                     title: Text("Delete"),
